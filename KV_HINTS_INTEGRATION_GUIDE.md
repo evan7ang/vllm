@@ -216,7 +216,7 @@ NPU 联调（B）建议先跑：`tests/v1/kv_hints/` + `tests/v1/core/`（A-5 �
 | `actions.py`+`dispatch.py`+`kv_hints/` 单测 | #59714（结构同源） | PR1：纯新增 + 测试补强，作为 #59714 的协同评论素材 |
 | `kv_cache_priority.py`+block_pool/scheduler 集成 | #59714 | PR2 |
 | `wire.py`+OpenAI 暴露 | #38514 占位 `kv_hints` 通道 | PR3（等契约①/RFC 收敛表态） |
-| `transfer_backend.py`+gpu_worker 重构 | 无对应 PR（新提案） | PR4（行为不变重构，B 的 NPU 对接前置） |
+| `transfer_backend.py`+gpu_worker 重构 | 无对应 PR（新提案） | ✅ **已提 [#62792](https://github.com/vllm-project/vllm/pull/62792)**（2026-10-20）；set_priority/OpenAI/COPY_TO 三面按 D-V1 承诺暂缓，待 #59714 作者回应后定形态 |
 | `prefetch.py`+offloading 集成 | #58198（结构同源） | PR5（与其收敛或等待其 rebase 后对齐） |
 | `copy_to.py`+注册 | #62382 方向 | 随 PR1/PR5 或单独，视 RFC 进展 |
 
