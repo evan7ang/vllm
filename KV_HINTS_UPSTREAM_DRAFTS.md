@@ -1,5 +1,10 @@
 # D-V1 上游评论草稿（发帖前人工审阅）
 
+> **发帖状态（2026-10-20）**：两份评论均已以 evan7ang 身份发出——
+> 草稿一 → <https://github.com/vllm-project/vllm/pull/59714#issuecomment-6305833875>
+> 草稿二 → <https://github.com/vllm-project/vllm/issues/59708#issuecomment-6305834117>
+> 发帖前核查通过（#59714 仍 Draft 且仅 mergify 通知；#59708 仍 Open）。
+> **与草稿的差异**：草稿二发出前在末段新增了对 @shivankur-code（10-05 已在 RFC 下认领 CPU-only 契约测试方向）的致意与互补边界声明；发帖前还确认了 #38514 当日新增两处块复用类 bug 修复（RichealYoung/hyeongyun0916），与本方实现覆盖面一致。
 > 生成：2026-10-20；作者：同事 A（人工提交者）
 > 规则（AGENTS.md）：由人工提交者逐行审阅后以本人身份发帖；两份草稿均为**技术贡献型**评论，不含未经验证的声明。
 > 事实基线：`KV_HINTS_VLLM_STATUS.md`（2026-10-19 取证）+ 2026-10-20 复核（#59708 Open、#59714/#58198 未合入、#38514 已转 Draft）。

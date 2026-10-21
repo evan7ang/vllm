@@ -145,7 +145,7 @@ M0 社区对齐(✅已完成,结论沉淀) ──▶ M0.5 三份接口契约冻�
 
 | # | 设计项 | 要点 | 产出 |
 | --- | --- | --- | --- |
-| D-V1 | 社区协同执行（M0 结论转化） | RFC #59708 开放无人认领；#59714 Draft+needs-rebase 零 review 且缺测试/perf；#38514 活跃且作者承诺对齐 #59714 契约；#62382 全家桶 Draft 自认需收敛。**策略：优先评审/补强 #59714（补 CPU-only 契约测试与 perf 证据、协助 rebase）；不新开竞争 PR；在 RFC 下声明我们的差异化贡献（NPU 验证 + 编排器闭环证据 + OpenAI 暴露对齐）** | 评审评论 + 协同计划 |
+| D-V1 | 社区协同执行（M0 结论转化） | RFC #59708 开放无人认领；#59714 Draft+needs-rebase 零 review 且缺测试/perf；#38514 活跃且作者承诺对齐 #59714 契约；#62382 全家桶 Draft 自认需收敛。**策略：优先评审/补强 #59714（补 CPU-only 契约测试与 perf 证据、协助 rebase）；不新开竞争 PR；在 RFC 下声明我们的差异化贡献（NPU 验证 + 编排器闭环证据 + OpenAI 暴露对齐）** | ✅ 已发帖（2026-10-20）：[#59714 评审](https://github.com/vllm-project/vllm/pull/59714#issuecomment-6305833875)、[#59708 意图声明](https://github.com/vllm-project/vllm/issues/59708#issuecomment-6305834117) |
 | D-V2 | Action 契约设计（v0.2 修订） | `SET_PRIORITY{target_blocks, location, claim_id, revision, value, ttl_seconds}`（对齐 #59714 实际契约）：优先级只偏置驱逐不保证驻留；`value=null` 清除声明；**claim/revision 承担同前缀多方声明的重叠仲裁**；TTL 过期模型 | `actions.py` 类型+文档 |
 | D-V3 | dispatch 注册设计 | `(action_type, action_version) → 唯一 consumer` 注册表；冲突拒绝；per-action 失败隔离（非法 payload 跳过不阻塞信封内其他 action）；为平台插件预留 executor 注册口（NPU/后端可注入自有实现，对应 RFC CASE 1/2 双通道） | `dispatch.py` 接口 |
 | D-V4 | G1 状态设计 | `core/kv_cache_priority.py`：活跃声明、过期、重叠解析、上限、牺牲块排序；必须正确处理 cache hit/释放/复用/失效/reset 时刻（不依赖新 hint 到达） | 设计文档（RFC 附录或独立 md） |
